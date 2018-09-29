@@ -97,7 +97,8 @@ public class BaseRecordGenerator extends AbstractJavaGenerator {
                 continue;
             }
             //FIXME - 不生成ID
-            if (introspectedColumn.getActualColumnName().toLowerCase().equals("id")) {
+            String fieldName = introspectedColumn.getActualColumnName().toLowerCase();
+            if (fieldName.equals("id") || fieldName.equals("create_user") || fieldName.equals("update_user") || fieldName.equals("create_time") || fieldName.equals("update_time") || fieldName.equals("status")) {
             	continue;
             }  
             

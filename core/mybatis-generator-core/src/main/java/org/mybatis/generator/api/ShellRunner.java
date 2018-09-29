@@ -55,8 +55,8 @@ public class ShellRunner {
     /**
      * 校验组基类
      */
-	public static final String VALIDATIONGROUP_BASE_CLASS = "com.demo.mybatis.base.BaseGroup.*";
-	public static final String CONFIG_FIFE_PATH = "D:\\Java\\workspace\\mybaits-generator-demo\\src\\main\\resources\\generatorConfig.xml";
+	public static final String VALIDATIONGROUP_BASE_CLASS = "com.iot.chinamobile.chss.facade.base.BaseGroup.*";
+	public static final String CONFIG_FIFE_PATH = "D:\\Java\\workspace\\generator-master\\core\\mybatis-generator-core\\generatorConfig.xml";
 	/*****************CUSTOM_CONFIG-END*******************/
 
     public static void main(String[] args) {

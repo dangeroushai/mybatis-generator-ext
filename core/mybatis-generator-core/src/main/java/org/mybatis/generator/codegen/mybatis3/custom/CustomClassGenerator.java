@@ -212,17 +212,17 @@ public class CustomClassGenerator extends AbstractJavaGenerator{
 		methodBodySB.append(recordTypeShortName).append(" ").append(recordName)
 				.append(" = ").append("new ").append(recordTypeShortName)
 				.append("();");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordName).append(".setId(")
 				.append(idParameter.getName()).append(");");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordName).append(".setStatus(0);");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordName).append(".setUpdateTime(new Date());");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordName).append(".setUpdateUser(")
 				.append(operatorIdParameter.getName()).append(");");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append("return ").append(CUSTOM_PROPERTIES_NAME.MAPPER)
 				.append(".updateByPrimaryKeySelective(").append(recordName)
 				.append(");");
@@ -271,27 +271,27 @@ public class CustomClassGenerator extends AbstractJavaGenerator{
 		methodBodySB.append("if (").append(idsParameter.getName())
 				.append(" == null || ").append(idsParameter.getName())
 				.append(".size() == 0) {return 0;}");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordTypeShortName).append(" ").append(recordName)
 				.append(" = ").append("new ").append(recordTypeShortName)
 				.append("();");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordName).append(".setStatus(0);");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordName).append(".setUpdateTime(new Date());");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(recordName).append(".setUpdateUser(")
 				.append(operatorIdParameter.getName()).append(");");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		/*methodBodySB.append("return ").append(CUSTOM_PROPERTIES_NAME.MAPPER)
 				.append(".updateSelectiveBatch(").append(recordName)
 				.append(", ").append(idsParameter.getName()).append(");");*/
 
 		methodBodySB.append(recordTypeShortName).append("Example " + CustomMethodGenerator.CUSTOM_METHOD_PARAM_NAME.EXAMPLE + " = new ").append(recordTypeShortName).append("Example();");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append(CustomMethodGenerator.CUSTOM_METHOD_PARAM_NAME.EXAMPLE + ".createCriteria().andIdIn(").append(idsParameter.getName()).append(").andStatusEqualTo(1);");
-		methodBodySB.append("        \r\n");
-		methodBodySB.append("        \r\n");
+		methodBodySB.append("\t\r\n");
+		methodBodySB.append("\t\r\n");
 		methodBodySB.append("return ").append(CUSTOM_PROPERTIES_NAME.MAPPER).append(".updateByExampleSelective(").append(recordName)
 		.append(", ").append(CustomMethodGenerator.CUSTOM_METHOD_PARAM_NAME.EXAMPLE).append(");");;
 		
