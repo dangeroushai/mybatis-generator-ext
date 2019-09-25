@@ -6,14 +6,14 @@
 <generatorConfiguration>  
 <!-- 需要指明数据库连接器的绝对路径 -->
     <classPathEntry  
-        location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar" />     
+        location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar" />     
     <context id="sqlserverTables" targetRuntime="MyBatis3">    
         <!-- 生成的pojo，将implements Serializable-->    
         <!-- <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin> -->    
 		<plugin type="org.mybatis.generator.plugins.ToStringPlugin">
 			<property name="useToStringFromRoot" value="true"/>
 		</plugin>
-		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+		<!-- <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin> -->
 		<!-- 分页插件 -->
 		<plugin type="org.mybatis.generator.plugins.custom.PaginationPlugin" /> 
         <commentGenerator>    
@@ -24,7 +24,7 @@
     
         <!-- 数据库链接URL、用户名、密码 -->    
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"    
-                        connectionURL="jdbc:mysql://172.16.5.40:3306/chss_core_db"    
+                        connectionURL="jdbc:mysql://172.16.5.39:3306/chss_order_db"    
                         userId="root"
                         password="alockcq@123456">    
         </jdbcConnection>    
@@ -42,7 +42,7 @@
         也可以使用“MAVEN”来自动生成，这样生成的代码会在target/generatord-source目录下    
         -->    
         <!--<javaModelGenerator targetPackage="com.joey.mybaties.test.pojo" targetProject="MAVEN">-->    
-        <javaModelGenerator targetPackage="com.iot.chinamobile.chss.facade.core" targetProject="./">    
+        <javaModelGenerator targetPackage="com.iot.chinamobile.chss.facade.order" targetProject="./">    
             <property name="enableSubPackages" value="true"/>    
             <!-- 从数据库返回的值被清理前后的空格  -->    
             <property name="trimStrings" value="true" />  
@@ -50,12 +50,12 @@
         </javaModelGenerator>    
     
         <!--对应的mapper.xml文件  -->    
-        <sqlMapGenerator targetPackage="com.iot.chinamobile.chss.core.mapper" targetProject="./">    
+        <sqlMapGenerator targetPackage="com.iot.chinamobile.chss.order.mapper" targetProject="./">    
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>    
     
         <!-- 对应的Mapper接口类文件 -->    
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.iot.chinamobile.chss.core.mapper" targetProject="./">  
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.iot.chinamobile.chss.order.mapper" targetProject="./">  
             <property name="enableSubPackages" value="true"/>    
         </javaClientGenerator>    
 			
